@@ -1,0 +1,152 @@
+@font-face {
+  font-family: 'ProximaNovaLight';
+  /*src: url("../font/fontawesome-webfont.woff") format("woff");*/
+  src: url("../font/proximanova-light-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+.primary-color {
+  color: #007509 !important; }
+
+.accent-color {
+  color: #ffffff !important; }
+
+.primary-bc-color {
+  background-color: #007509 !important; }
+
+.right-corner {
+  position: fixed;
+  z-index: 50;
+  right: 14px;
+  bottom: calc(72px); }
+
+.accent-bc-color {
+  background-color: #ffffff !important; }
+
+.panel-find {
+  position: absolute;
+  z-index: 27;
+  min-height: 150px;
+  background-color: #ffffff !important;
+  color: #161617 !important;
+  border-bottom: 5px solid #161617;
+  border-left: 5px solid #161617;
+  border-right: 5px solid #161617; }
+
+.top-menu {
+  position: absolute;
+  right: 5px; }
+
+md-input-container {
+  margin: 13px 0 !important; }
+
+md-input-container.no-error-space .md-errors-spacer {
+  min-height: 0px !important; }
+
+md-radio-button .md-off,
+md-radio-button .md-on {
+  border-color: #ffffff !important; }
+
+.center-point {
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%; }
+
+.search-input {
+  outline: 0;
+  font-family: Sans-Serif;
+  font-size: 6rem;
+  font-weight: bold;
+  background: none;
+  color: #ffffff;
+  box-shadow: none !important;
+  border: 0;
+  padding: 0;
+  width: 100%; }
+
+@font-face {
+  font-family: 'Big';
+  /*src: url("../font/fontawesome-webfont.woff") format("woff");*/
+  src: url("../font/Cafe Nero M54.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+
+body {
+  font-family: ProximaNovaLight;
+  background-color: #161617;
+  color: #ffffff; }
+
+.center {
+  text-align: center;
+  display: block;
+  font-weight: bolder;
+  width: 100%; }
+
+.btn-close-toolbar {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: red;
+  cursor: pointer; }
+
+.btn-close-toolbar:hover {
+  color: initial; }
+
+.hover {
+  cursor: pointer; }
+
+.hover:hover {
+  color: #007509; }
+
+.login-panel {
+  background-color: #ffffff;
+  padding: 10px;
+  width: 400px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  position: fixed; }
+
+.ng-enter {
+  animation: slideInLeft 0.5s linear;
+  -webkit-animation: slideInLeft 0.5s linear; }
+
+.ng-leave {
+  animation: slideInDowm 0.5s linear;
+  -webkit-animation: slideInDowm 0.5s linear; }
+
+@keyframes slideInLeft {
+  from {
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+    visibility: visible; }
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0); } }
+
+@keyframes slideInDowm {
+  from {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0); }
+  to {
+    visibility: hidden;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0); } }
+
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #007509;
+  color: white;
+  text-align: center;
+  font-weight: 100; }
+
+.main-content {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  overflow-y: auto;
+  overflow-x: hidden; }

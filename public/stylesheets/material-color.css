@@ -1,0 +1,109 @@
+.fa-spin-fast {
+  -webkit-animation: fa-spin-fast .2s infinite linear;
+  animation: fa-spin-fast .2s infinite linear; }
+
+@-webkit-keyframes fa-spin-fast {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg); }
+  100% {
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg); } }
+
+@keyframes fa-spin-fast {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg); }
+  100% {
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg); } }
+
+.material-card.red h2 {
+  background-color: #fa0000; }
+  .material-card.red h2:after {
+    border-top-color: #fa0000;
+    border-right-color: #fa0000;
+    border-bottom-color: transparent;
+    border-left-color: transparent; }
+  .material-card.red h2:before {
+    border-top-color: transparent;
+    border-right-color: maroon;
+    border-bottom-color: maroon;
+    border-left-color: transparent; }
+
+.material-card.red.mc-active h2:before {
+  border-top-color: transparent;
+  border-right-color: #fa0000;
+  border-bottom-color: #fa0000;
+  border-left-color: transparent; }
+
+.material-card.red.mc-active h2:after {
+  border-top-color: maroon;
+  border-right-color: maroon;
+  border-bottom-color: transparent;
+  border-left-color: transparent; }
+
+.material-card.red .mc-btn-action {
+  background-color: #fa0000; }
+  .material-card.red .mc-btn-action:hover {
+    background-color: maroon; }
+
+.material-card.red .mc-footer h4 {
+  color: maroon; }
+
+.material-card.red .mc-footer a {
+  background-color: maroon; }
+
+.material-card.red.mc-active .mc-content {
+  background-color: black; }
+
+.material-card.red.mc-active .mc-footer {
+  background-color: #fa0000; }
+
+.material-card.red.mc-active .mc-btn-action {
+  border-color: black; }
+
+.material-card.indigo h2 {
+  background-color: #48007d; }
+  .material-card.indigo h2:after {
+    border-top-color: #48007d;
+    border-right-color: #48007d;
+    border-bottom-color: transparent;
+    border-left-color: transparent; }
+  .material-card.indigo h2:before {
+    border-top-color: transparent;
+    border-right-color: #010003;
+    border-bottom-color: #010003;
+    border-left-color: transparent; }
+
+.material-card.indigo.mc-active h2:before {
+  border-top-color: transparent;
+  border-right-color: #48007d;
+  border-bottom-color: #48007d;
+  border-left-color: transparent; }
+
+.material-card.indigo.mc-active h2:after {
+  border-top-color: #010003;
+  border-right-color: #010003;
+  border-bottom-color: transparent;
+  border-left-color: transparent; }
+
+.material-card.indigo .mc-btn-action {
+  background-color: #48007d; }
+  .material-card.indigo .mc-btn-action:hover {
+    background-color: #010003; }
+
+.material-card.indigo .mc-footer h4 {
+  color: #010003; }
+
+.material-card.indigo .mc-footer a {
+  background-color: #010003; }
+
+.material-card.indigo.mc-active .mc-content {
+  background-color: black; }
+
+.material-card.indigo.mc-active .mc-footer {
+  background-color: #48007d; }
+
+.material-card.indigo.mc-active .mc-btn-action {
+  border-color: black; }

@@ -1,0 +1,30 @@
+h1(class="center") {{title}}
+md-content(ng-controller='AddContactCtrl')
+ form(name="userForm" ng-submit="submitForm(userForm.$valid)" novalidate)
+    div(ng-repeat="group in items" class="col_{{group.items[0].col}}")
+        md-toolbar(ng-show="group.key!=='undefined'")
+            h3(class="center") &nbsp; Input {{group.key}}
+        div(ng-repeat="item in group.items" )
+            md-input-container(ng-show="item.inputType ==='textBox' && item.type==='Date'" class="md-block" flex="50") 
+                label {{item.title}}
+                md-datepicker(ng-required="item.isRequired" ng-model="item.value" md-placeholder="{{item.title}}")
+            md-input-container(ng-show="item.inputType ==='textBox' && item.type==='String'" class="md-block" flex="50") 
+                label {{item.title}} 
+                input( ng-required="item.isRequired" ng-model="item.value")   
+            md-input-container(ng-show="item.inputType ==='textArea'"  class="md-block" flex="50") 
+                label {{item.title}}
+                textarea(ng-required="item.isRequired" ng-model="item.value" md-maxlength="{{item.maxLength}}"  rows="5" required md-no-asterisk)
+            div(ng-show="item.inputType ==='listTextBox'")
+                md-input-container(class="md-block" flex="50") 
+                    label {{item.title}}
+                    md-icon(class="name fa fa fa-plus" style="outline:none;cursor:pointer" ng-click="add(item)")                    
+                    input(ng-model="item.temp")
+                    
+                    md-button(ng-repeat="data in item.value" ng-click="edit(item,data)")
+                        span {{data}}
+                        i(class="fa fa-times" aria-hidden="true")
+    .col_12
+        .col_6
+            md-button(class="md-raised md-primary" type="submit" ng-click="save()" style="width:90%") Save
+        .col_6
+            md-button(class="md-raised md-warn"  style="width:90%") Cancel

@@ -1,0 +1,13 @@
+[{
+    "name": "SampleCreateForm",
+    "url": "/SampleCreateForm",
+    "templateurl": "module/SampleCreateForm/index.html",
+    "controller": "SampleCreateFormCtrl",
+    "deps": [{
+        "module": "Services",
+        "define": "Service"
+    }, {
+        "module": "LoginServices",
+        "define": "LoginService"
+    }]
+}]

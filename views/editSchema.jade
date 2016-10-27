@@ -1,0 +1,49 @@
+md-content(ng-controller='SchemaContactCtrl')
+    h1(style="position:relative" class="center") Manage Schema 
+    md-button(style="" class="md-raised md-primary right-corner" ng-click="Add()")
+        i(class="fa fa-plus" aria-hidden="true") 
+        span Add Schema Item
+    div(ng-repeat="item in items" class="col_4")
+        md-content
+            md-toolbar
+                h1 {{item.title}}
+                i(class="fa fa-times fa-3x btn-close-toolbar" ng-click="delete(item)") 
+            .col_6    
+                md-input-container(class="md-block no-error-space" flex="50") 
+                    label Key
+                    input(ng-model="item.key")
+            .col_6            
+                md-input-container(class="md-block no-error-space" flex="50") 
+                    label Label
+                    input(ng-model="item.title")
+            .col_6                    
+                md-input-container(class="md-block no-error-space" flex="50") 
+                    label Group name
+                    input(ng-model="item.groupName")
+            .col_6
+                md-input-container(class="md-block no-error-space" flex="50") 
+                    label Count Column
+                    input(ng-model="item.col")   
+                       
+            .col_6     
+                md-input-container(class="md-block" flex="50") 
+                    label Type Input
+                    md-select(ng-model="item.inputType") 
+                     md-option(ng-repeat="input in inputTypes" ng-value="input" )  {{input}}
+            .col_6        
+                md-input-container(class="md-block" flex="50") 
+                    label Type Data
+                    md-select(ng-model="item.type") 
+                     md-option(ng-repeat="type in types" ng-value="type.value" )  {{type.display}}
+            .col_6             
+                md-input-container(class="md-block" flex="50" style="width: 98%;") 
+                    label Max Length
+                    input(ng-model="item.maxLength" type="number" min="0" max="5000")  
+            .col_6             
+                md-input-container(class="md-block" flex="50" style="width: 98%;") 
+                    md-checkbox(ng-model="item.isRequired") Required                
+    .col_12
+        .col_6
+            md-button(class="md-raised md-primary" style="width:100%" ng-click="save()") Save
+        .col_6
+            md-button(class="md-raised md-warn" style="width:100%") Cancel

@@ -1,0 +1,39 @@
+div(ng-controller="DashboardCtrl")
+    md-toolbar(class="md-hue-2" ng-show="isLogin" style="position:fixed;z-index: 21;")            
+        div(class="md-toolbar-tools" ) 
+            md-button(class="md-icon-button" aria-label="home" ng-click="gotoHome()" ng-show="isMobile ===false") 
+                i(class="fa fa-bars" aria-hidden="true")  
+            h2 
+                span Contact Management 
+            span(flex class="top-menu" ) 
+                md-content(ng-show="isMobile ===false") 
+                    md-button(class="md-icon-button" ng-click="add()") 
+                        i(class="fa fa-plus" aria-hidden="true")  
+                    md-button(class="md-icon-button" ng-click="find()") 
+                        i(class="fa fa-search" aria-hidden="true")
+                    md-button(class="md-icon-button" ng-click="setting()") 
+                        i(class="fa fa-cog" aria-hidden="true")       
+                    md-button(aria-label="Sign Out" class="md-icon-button" ng-click="signOut()") 
+                        i(class="fa fa-sign-out" aria-hidden="true")
+                md-button(class="md-icon-button" ng-show="isMobile ===true" aria-label="home" ng-click="toggleRight()" ) 
+                    i(class="fa fa-bars" aria-hidden="true")  
+
+    div(is-mobile item="isMobile")
+md-sidenav(class="md-sidenav-right md-whiteframe-4dp" md-component-id="right")
+      md-toolbar(class="md-theme-light") 
+        h1(class="md-toolbar-tools") Navigasi
+      md-content
+        md-button( style="width:45%" class="md-raised md-primary" ng-click="add();") 
+          i(class="fa fa-plus fa-3x" aria-hidden="true")  
+          p(style="margin:0px") Add Contact
+        md-button( style="width:45%" class="md-raised md-primary" ng-click="find()") 
+          i(class="fa fa-search fa-3x" aria-hidden="true")
+          p(style="margin:0px") Find Contact
+        md-button( style="width:45%" class="md-raised md-primary" ng-click="setting()") 
+          i(class="fa fa-cog fa-3x" aria-hidden="true")
+          p(style="margin:0px") Edit Schema       
+        md-button( style="width:45%" aria-label="Sign Out" class="md-raised md-primary" ng-click="signOut();") 
+          i(class="fa fa-sign-out fa-3x" aria-hidden="true")
+          p(style="margin:0px") Sign Out
+div(style="position:relative;top: 64px;" ui-view="")                        
+            

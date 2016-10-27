@@ -1,0 +1,47 @@
+{
+    "name": "problemset-nodejs",
+    "version": "0.0.1",
+    "description": "aplikasi untuk mengelola kontak",
+    "main": "app.js",
+    "scripts": {
+        "start": "nodemon ./app.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://gitlab.com/if07012/problemset-nodejs.git"
+    },
+    "keywords": [
+        "kontak",
+        "nodejs",
+        "expressjs",
+        "mongodb",
+        "angularjs",
+        "problemset"
+    ],
+    "author": "if07012",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://gitlab.com/if07012/problemset-nodejs/issues"
+    },
+    "homepage": "https://gitlab.com/if07012/problemset-nodejs#README",
+    "dependencies": {
+        "basic-auth": "^1.0.4",
+        "body-parser": "^1.15.2",
+        "body-parser-json": "^1.9.2",
+        "express": "^4.14.0",
+        "faker": "3.1.0",
+        "gulp": "^3.9.1",
+        "gulp-sass": "^2.3.2",
+        "jade": "^1.11.0",
+        "js-remove-property": "^1.0.5",
+        "mongodb": "^2.2.10",
+        "mongoose": "^4.6.0",
+        "morgan": "^1.7.0",
+        "node-sass": "^3.9.3",
+        "socket.io": "^1.4.8"
+    },
+    "devDependencies": {
+        "grunt": "^1.0.1",
+        "grunt-less-to-sass": "0.0.10"
+    }
+}

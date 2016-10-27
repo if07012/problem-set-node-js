@@ -1,0 +1,66 @@
+@import 'mixin';
+$dark:25%;
+$light:1%;
+@mixin material-card-color ($colorPalate) {
+    .material-card.#{$colorPalate} {
+        h2 {
+            @include materializr($colorPalate, $light);
+            &:after {
+                @include materializr($colorPalate, $light, border-top-color);
+                @include materializr($colorPalate, $light, border-right-color);
+                border-bottom-color: transparent;
+                border-left-color: transparent;
+            }
+            &:before {
+                border-top-color: transparent;
+                @include materializr($colorPalate, $dark, border-right-color);
+                @include materializr($colorPalate, $dark, border-bottom-color);
+                border-left-color: transparent;
+            }
+        }
+        &.mc-active {
+            h2 {
+                &:before {
+                    border-top-color: transparent;
+                    @include materializr($colorPalate, $light, border-right-color);
+                    @include materializr($colorPalate, $light, border-bottom-color);
+                    border-left-color: transparent;
+                }
+                &:after {
+                    @include materializr($colorPalate, $dark, border-top-color);
+                    @include materializr($colorPalate, $dark, border-right-color);
+                    border-bottom-color: transparent;
+                    border-left-color: transparent;
+                }
+            }
+        }
+        .mc-btn-action {
+            @include materializr($colorPalate, $light);
+            &:hover {
+                @include materializr($colorPalate, $dark);
+            }
+        }
+        .mc-footer {
+            h4 {
+                @include materializr($colorPalate, $dark, color);
+            }
+            a {
+                @include materializr($colorPalate, $dark);
+            }
+        }
+        &.mc-active {
+            .mc-content {
+                @include materializr($colorPalate, 50);
+            }
+            .mc-footer {
+                @include materializr($colorPalate, $light);
+            }
+            .mc-btn-action {
+                @include materializr($colorPalate, 50, border-color);
+            }
+        }
+    }
+}
+
+@include material-card-color(red);
+@include material-card-color(indigo);

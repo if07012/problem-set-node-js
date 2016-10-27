@@ -1,0 +1,28 @@
+div(ng-controllers="ContactCtrl")
+    div(ui-view="")  
+    .container
+        .col_3(ng-repeat="data in items" )
+            article(class="material-card indigo" material-card-item) 
+                    h2 
+                        span(class="hover" ng-click="show(data)") {{data.name}} 
+                        strong 
+                            p address :  {{data.address[0]}}
+                            br
+                            p email :  {{data.email[0]}}
+                            br
+                            p phone :  {{data.phone[0]}}
+                            br
+                            p company :  {{data.company[0]}}
+                    div(class="mc-content") 
+                        div(class="img-container accent-bc-color" ) 
+                            img(class="img-responsive" src="/asset/images/male.png") 
+                        div(class="mc-description") 
+                            p {{data.description}}
+                    a(class="mc-btn-action") 
+                        i(class="fa fa-bars") 
+                    div(class="mc-footer") 
+                        a(class="fa fa-fw fa-pencil" ng-click="edit(data)")
+                        a(class="fa fa-fw fa-trash" ng-click="delete($event,data)") 
+            //- .col_content(style="background-color:black") 
+            //-     h1 {{data.title}} {{data.name}}
+            

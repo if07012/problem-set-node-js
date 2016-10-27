@@ -1,0 +1,19 @@
+
+div(ng-controller="LoginCtrl" style="position: fixed;height: 100%;width:100%")
+  div(ng-show="!isLogin" class="col_4 center-point" ) 
+    md-toolbar(class="md-hue-2" )       
+        h2(class="center") Login  
+    md-content(style="overflow: hidden;")
+        md-input-container(class="md-icon-float md-block")
+            label Username
+            md-icon(class="fa fa-envelope")
+            input(ng-disabled="successLogin" required ng-model="username")
+        md-input-container(class="md-icon-float md-block")
+            label Kata Kunci
+            md-icon(class="fa fa-key")
+            input(ng-disabled="successLogin" ng-model="password" type="password")
+        div(class="col_12") 
+            div(class="col_6") 
+                md-button(ng-hide="successLogin" ng-click="login()" style="width:95%;color:white" class="md-raised md-primary")  Masuk 
+            div(ng-hide="successLogin" class="col_6")
+                md-button(style="width:95%" class="md-raised md-warn") Batal 

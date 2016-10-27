@@ -1,0 +1,140 @@
+.container {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.col_1,
+.col_2,
+.col_3,
+.col_4,
+.col_5,
+.col_6,
+.col_7,
+.col_8,
+.col_9,
+.col_10,
+.col_11 {
+    display: inline;
+    float: left;
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+.container .col_3 {
+    width: 25%;
+}
+
+.container .col_6 {
+    width: 50%;
+}
+
+.container .col_9 {
+    width: 75%;
+}
+
+.container .col_12 {
+    width: 100%;
+    float: left;
+}
+
+.container .col_1 {
+    width: 8.333%;
+}
+
+.container .col_2 {
+    width: 16.6777%;
+}
+
+.container .col_3 {
+    width: 25%;
+}
+
+.container .col_4 {
+    width: 33.333%;
+}
+
+.container .col_5 {
+    width: 41.66667%;
+}
+
+.container .col_7 {
+    width: 58.3333%;
+}
+
+.container .col_8 {
+    width: 66.666667%;
+}
+
+.container .col_10 {
+    width: 83.33333%;
+}
+
+.container .col_11 {
+    width: 91.6666667%;
+}
+
+.col_content {
+    padding: 5px;
+}
+
+@media screen and (max-width:480px) {
+    .container .col_1,
+    .container .col_2,
+    .container .col_3,
+    .container .col_4,
+    .container .col_5,
+    .container .col_6,
+    .container .col_7,
+    .container .col_8,
+    .container .col_9,
+    .container .col_10,
+    .container .col_11,
+    .container .col_12 {
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 481px) and (max-width:640px) {
+    .container .col_1,
+    .container .col_2,
+    .container .col_3,
+    .container .col_4,
+    .container .col_5,
+    .container .col_6 {
+        width: 50%;
+    }
+    .container .col_7,
+    .container .col_8 .container .col_9,
+    .container .col_10,
+    .container .col_11,
+    .container .col_12 {
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 641px) and (max-width:960px) {
+    .container .col_1,
+    .container .col_2 {
+        width: 16.66667%;
+    }
+    .container .col_3,
+    .container .col_4 {
+        width: 33.333333%;
+    }
+    .container .col_5,
+    .container .col_6 {
+        width: 50%;
+    }
+    .container .col_7,
+    .container .col_8 {
+        width: 66.666667%;
+    }
+    .container .col_9,
+    .container .col_10 {
+        width: 83.3333%;
+    }
+    .container .col_11,
+    .container .col_12 {
+        width: 100%;
+    }
+}
